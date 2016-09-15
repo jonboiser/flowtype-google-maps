@@ -9,8 +9,6 @@ declare class goog$LatLng {
 
 }
 
-declare type goog$MapTypeId = 'HYBRID' | 'ROADMAP' | 'SATELLITE' | 'TERRAIN';
-
 declare type goog$LatLngBoundsLiteral = {
   lat: number,
   lng: number
@@ -28,7 +26,7 @@ declare class goog$Map {
   getClickableIcons(): boolean;
   getDiv(): HTMLElement;
   getHeading(): number;
-  getMapTypeId(): goog$MapTypeId | string;
+  getMapTypeId(): string;
   getProjection(): any;
   getStreetView(): any;
   getTilt(): number;
@@ -39,11 +37,11 @@ declare class goog$Map {
   setCenter(latLng: goog$LatLng | goog$LatLngLiteral): void;
   setClickableIcons(value: boolean): void;
   setHeading(heading: number): void;
-  setMapTypeId(mapTypeId: goog$MapTypeId | string): void;
+  setMapTypeId(mapTypeId: string): void;
   setOptions(options: Object): void;
   setStreetView(panorama: Object): void;
-  setTilt(tilt:number): void;
-  setZoom(zoom:number): void;
+  setTilt(tilt: number): void;
+  setZoom(zoom: number): void;
   controls: Array<any>;
   data: Object;
   mapTypes: any;
