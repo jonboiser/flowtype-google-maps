@@ -19,7 +19,17 @@ declare type goog$LatLngLiteral = {
   lng: number
 }
 
-declare class goog$Map {
+declare class goog$MVCObject {
+  addListener(event: string, handler: Function): any;
+  get(key: string): any;
+  notify(key: string): void;
+  set(key: string, value: any): void;
+  setValues(values?: Object): void;
+  unbind(key: string): void;
+  unbindAll(): void;
+}
+
+declare class goog$Map extends goog$MVCObject {
   fitBounds(bounds: goog$LatLngBounds | goog$LatLngBoundsLiteral): void;
   getBounds(): goog$LatLngBounds;
   getCenter(): goog$LatLng;
